@@ -14,6 +14,7 @@ struct ContentView: View {
                 .tabItem{
                     Label("Browse", systemImage: "books.vertical.fill")
                 }
+            
             DeveloperView()
                 .tabItem{
                     Label("Developer", systemImage: "person.fill")
@@ -23,6 +24,7 @@ struct ContentView: View {
                     Label("API Info", systemImage: "antenna.radiowaves.left.and.right")
                 }
         }
+        .tint(.pink)
     }
 }
 

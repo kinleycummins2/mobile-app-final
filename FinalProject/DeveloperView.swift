@@ -16,12 +16,10 @@ struct DeveloperView: View {
                     Group {
                             Image(systemName: "person.crop.circle.fill")
                                 .resizable()
-                                .foregroundColor(.accentColor)
+                                .foregroundColor(.pink)
                         }
                     }
                     .frame(width: 120, height: 120)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.accentColor, lineWidth: 3))
                     .shadow(radius: 6)
                     .padding(.top, 12)
  
@@ -30,7 +28,7 @@ struct DeveloperView: View {
                         ForEach(DeveloperInfo.allCases, id: \.self) { info in
                             HStack(spacing: 16) {
                                 Image(systemName: info.icon)
-                                    .foregroundColor(.accentColor)
+                                    .foregroundColor(.pink)
                                     .frame(width: 28)
  
                                 VStack(alignment: .leading, spacing: 2) {
@@ -44,7 +42,7 @@ struct DeveloperView: View {
                                 Spacer()
                             }
                             .padding()
-                            .background(Color.secondary)
+                            .background(Color.pink.opacity(0.30)) // wanted a lighter pink
                             .cornerRadius(12)
                         }
                     }

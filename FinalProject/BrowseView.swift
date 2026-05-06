@@ -33,6 +33,7 @@ struct BrowseView: View {
                                 .frame(maxWidth: .infinity)
                         }
                         .buttonStyle(.borderedProminent)
+                        .tint(.pink)
                         .padding()
                     }
                 }
@@ -71,6 +72,7 @@ struct BrowseView: View {
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
+                .tint(.pink)
                 .padding()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
