@@ -11,9 +11,6 @@
 		E009B3842FAA6FD10081C8DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009B3832FAA6FD10081C8DE /* ContentView.swift */; };
 		E009B3862FAA6FD60081C8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E009B3852FAA6FD60081C8DE /* Assets.xcassets */; };
 		E009B38A2FAA6FD60081C8DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E009B3892FAA6FD60081C8DE /* Preview Assets.xcassets */; };
-		E009B3942FAA6FD60081C8DE /* FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009B3932FAA6FD60081C8DE /* FinalProjectTests.swift */; };
-		E009B39E2FAA6FD70081C8DE /* FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009B39D2FAA6FD70081C8DE /* FinalProjectUITests.swift */; };
-		E009B3A02FAA6FD70081C8DE /* FinalProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009B39F2FAA6FD70081C8DE /* FinalProjectUITestsLaunchTests.swift */; };
 		E009B3AD2FAAC51D0081C8DE /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009B3AC2FAAC51D0081C8DE /* BrowseView.swift */; };
 		E009B3AF2FAAC6180081C8DE /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009B3AE2FAAC6180081C8DE /* BookViewModel.swift */; };
 		E009B3B12FAAC7520081C8DE /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009B3B02FAAC7520081C8DE /* BookModel.swift */; };
@@ -48,10 +45,7 @@
 		E009B3872FAA6FD60081C8DE /* FinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalProject.entitlements; sourceTree = "<group>"; };
 		E009B3892FAA6FD60081C8DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E009B38F2FAA6FD60081C8DE /* FinalProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E009B3932FAA6FD60081C8DE /* FinalProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectTests.swift; sourceTree = "<group>"; };
 		E009B3992FAA6FD70081C8DE /* FinalProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E009B39D2FAA6FD70081C8DE /* FinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectUITests.swift; sourceTree = "<group>"; };
-		E009B39F2FAA6FD70081C8DE /* FinalProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E009B3AC2FAAC51D0081C8DE /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		E009B3AE2FAAC6180081C8DE /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		E009B3B02FAAC7520081C8DE /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
@@ -90,8 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				E009B3802FAA6FD10081C8DE /* FinalProject */,
-				E009B3922FAA6FD60081C8DE /* FinalProjectTests */,
-				E009B39C2FAA6FD70081C8DE /* FinalProjectUITests */,
 				E009B37F2FAA6FD10081C8DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,23 +123,6 @@
 				E009B3892FAA6FD60081C8DE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E009B3922FAA6FD60081C8DE /* FinalProjectTests */ = {
-			isa = PBXGroup;
-			children = (
-				E009B3932FAA6FD60081C8DE /* FinalProjectTests.swift */,
-			);
-			path = FinalProjectTests;
-			sourceTree = "<group>";
-		};
-		E009B39C2FAA6FD70081C8DE /* FinalProjectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E009B39D2FAA6FD70081C8DE /* FinalProjectUITests.swift */,
-				E009B39F2FAA6FD70081C8DE /* FinalProjectUITestsLaunchTests.swift */,
-			);
-			path = FinalProjectUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E009B3942FAA6FD60081C8DE /* FinalProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +278,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E009B39E2FAA6FD70081C8DE /* FinalProjectUITests.swift in Sources */,
-				E009B3A02FAA6FD70081C8DE /* FinalProjectUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,7 +486,6 @@
 		E009B3A72FAA6FD70081C8DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -536,7 +507,6 @@
 		E009B3A82FAA6FD70081C8DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -558,7 +528,6 @@
 		E009B3AA2FAA6FD70081C8DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -579,7 +548,6 @@
 		E009B3AB2FAA6FD70081C8DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

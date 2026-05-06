@@ -17,7 +17,7 @@ struct BookDetailView: View {
                 // Cover image
                 if let url = book.coverURL {
                     AsyncImage(url: url) { phase in
-                        switch phase {
+                        switch phase{
                         case .empty:
                             ProgressView()
                                 .frame(height: 300)
@@ -29,6 +29,8 @@ struct BookDetailView: View {
                                 .cornerRadius(12)
                                 .shadow(radius: 8)
                         case .failure:
+                            placeholderCover
+                        @unknown default: // Needed for switch phase becuase there could be future cases added
                             placeholderCover
                         }
                     }
@@ -47,16 +49,13 @@ struct BookDetailView: View {
                 Text("by \(book.primaryAuthor)")
                     .font(.title3)
                     .foregroundColor(.secondary)
- 
-                // Xcode 26 version
-//                Text("First published: \(year)")
-//                    .font(.subheadline)
+
+//                Text("Subject: \(book.subjectSummary)")
 //                    .foregroundColor(.secondary)
-                Text("Subject: \(book.subjectSummary)")
-                    .foregroundColor(.secondary)
+                
                 // Release year
                 if let year = book.first_publish_year {
-                    Text("First published: \(String(year))")
+                    Text("First published: \(String(year))") // Have to turn the year into a string so that way it won't add a comma to the year
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 } else {
@@ -70,7 +69,6 @@ struct BookDetailView: View {
             .padding()
         }
         .navigationTitle(book.title)
-//        .navigationBarTitleDisplayMode(.inline)
     }
  
     private var placeholderCover: some View {
@@ -87,11 +85,11 @@ struct BookDetailView: View {
 
 #Preview {
     BookDetailView(book: BookModel(
-        key: "/works/OL123W",
-        title: "The Name of the Wind",
-        author_name: ["Patrick Rothfuss"],
-        first_publish_year: 2007,
-        cover_i: 8734555,
-        subject: ["Fantasy"]
+        key: "/works/OL22842132M",
+        title: "Catching Fire",
+        author_name: ["Suzanne Collins"],
+        first_publish_year: 2009,
+        cover_i: 12646539,
+        subject: ["Dystopian"]
     ))
 }

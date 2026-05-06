@@ -24,6 +24,7 @@ class BookViewModel: ObservableObject {
         let group = DispatchGroup() // DispatchGroup allows it to wait until all 5 requests are done
         var results: [BookModel] = []
         
+//        added a publish year limit because I was getting books from the 1700s
         for genre in genres {
             guard let url = URL(string: "https://openlibrary.org/search.json?subject=\(genre)&publish_year=[1925 TO 9999]&limit=50")
             else{
@@ -47,7 +48,9 @@ class BookViewModel: ObservableObject {
                 
                 do {
                     let result = try JSONDecoder().decode(BookSearchResponse.self, from: data)
+//                    Trying to only pull books with a cover
                     let withCovers = result.docs.filter { $0.cover_i != nil && ($0.first_publish_year ?? 0) >= 1925 }
+//                    API doesn't have a random feature, so this is how I'm randomly generating
                     if let pick = withCovers.randomElement() {
                         results.append(pick)
                     }

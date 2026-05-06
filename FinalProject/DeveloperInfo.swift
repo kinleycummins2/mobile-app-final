@@ -29,7 +29,7 @@ enum DeveloperInfo: CaseIterable{
         case .name: "Kinley Cummins"
         case .favbook: "Any of the books from The Hunger Games universe... but Catching Fire holds a special place in my heart!"
         case .major: "Computer Information Science"
-        case .summary: "This app was created with intention of being a final project for the course Mobile App Development. It is a app that utliizes the OpenLibrary API by getting 5 random books from 5 different genres. From there, the user can select a book to view more detail about it or randomize the books again."
+        case .summary: "This app was created with intention of being a final project for the course Mobile App Development. It is a app that utliizes the OpenLibrary API by getting 5 random books from 5 different subject tags. From there, the user can select a book to view more detail about it or randomize the books again."
 
         }
     }

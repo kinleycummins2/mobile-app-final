@@ -22,13 +22,11 @@ struct APIInfoView: View {
                     infoCard(title: "Website",     value: "openlibrary.org")
                     infoCard(title: "Endpoint",    value: "openlibrary.org/search.json")
                     infoCard(title: "Requires Key",value: "No")
-                    // TODO: replace with your real name
                     infoCard(title: "Developer",   value: "Kinley Cummins")
                 }
                 .padding()
             }
             .navigationTitle("API Info")
-//            .navigationBarTitleDisplayMode(.large)
         }
     }
  

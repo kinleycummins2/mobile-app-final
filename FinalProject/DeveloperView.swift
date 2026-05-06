@@ -52,7 +52,6 @@ struct DeveloperView: View {
                 }
             }
             .navigationTitle("Developer")
-//            .navigationBarTitleDisplayMode(.large)
         }
     }
 
