@@ -14,6 +14,7 @@ struct DeveloperView: View {
                 VStack(spacing: 24) {
  
                     Group {
+//                        Was going to maybe use this as a fallback and make an actual image appear instead, but had a lot of issues doing that 
                             Image(systemName: "person.crop.circle.fill")
                                 .resizable()
                                 .foregroundColor(.pink)

@@ -14,6 +14,7 @@ struct BrowseView: View {
     var body: some View {
         NavigationStack{
             VStack(spacing: 0){
+//                I wasn't able to put my views directly in here, so they are delcared toward the bottom of the file
                 Group{
                     if viewModel.isLoading{
                         loadingView
@@ -39,6 +40,7 @@ struct BrowseView: View {
                 }
                 .navigationTitle("Book Browse")
             }
+//        sets this stack to only show once the books are loaded in
             .onAppear {
                 if viewModel.books.isEmpty{
                     viewModel.fetchBooks()
@@ -46,6 +48,8 @@ struct BrowseView: View {
                 }
             }
         }
+//    views I mentioned above
+//    this is the one that shows when its loading
         private var loadingView: some View {
             VStack(spacing: 16) {
                 ProgressView()
@@ -56,6 +60,7 @@ struct BrowseView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
         }
+//    this view shows when an error appears (looks very pretty because I may of spent a while looking at an error..)
         private var errorView: some View {
             VStack(spacing: 16) {
                 Image(systemName: "exclamationmark.triangle.fill")
@@ -65,6 +70,7 @@ struct BrowseView: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(.secondary)
                     .padding(.horizontal)
+//                Same button as before, the generate new books button
                 Button {
                     viewModel.fetchBooks()
                 } label: {
@@ -77,6 +83,7 @@ struct BrowseView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+// View for the actual booklist, shows them in a v stack manner
         private var bookList: some View {
             List(viewModel.books) { book in
                 NavigationLink(destination: BookDetailView(book: book)) {
